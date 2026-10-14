@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeVerse — Learn programming, practice coding, and explore AI, ML and DSA.">
+  <title>CodeVerse | Learn. Build. Grow.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a href="#" class="brand" data-go="home">
+        <span class="brand-icon">&lt;/&gt;</span>
+        <span>Code<span class="accent">Verse</span></span>
+      </a>
+
+      <p class="side-label">WORKSPACE</p>
+      <nav class="side-nav">
+        <button class="nav-link active" data-view="home"><span>⌂</span> Overview</button>
+        <button class="nav-link" data-view="explore"><span>▦</span> Explore topics</button>
+        <button class="nav-link" data-view="learn"><span>◷</span> My learning</button>
+        <button class="nav-link" data-view="quiz"><span>✳</span> Quick quiz</button>
+      </nav>
+
+      <p class="side-label">LEARN BY CATEGORY</p>
+      <div class="side-categories">
+        <button data-go="explore" data-category="Python & Data"><i class="dot purple"></i> Python & Data</button>
+        <button data-go="explore" data-category="Web Development"><i class="dot cyan"></i> Web Development</button>
+        <button data-go="explore" data-category="Programming"><i class="dot orange"></i> Programming</button>
+        <button data-go="explore" data-category="AI & Tools"><i class="dot green"></i> AI & Tools</button>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-mini-icon">✦</div>
+        <strong>Keep growing.</strong>
+        <p>Small steps today. Strong skills tomorrow.</p>
+        <button class="text-button" data-go="explore">Find your next topic ↗</button>
+      </div>
+      <div class="sidebar-footer">CODEVERSE <span>•</span> LEARN SOMETHING NEW</div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="mobile-brand">Code<span class="accent">Verse</span></div>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="pageBreadcrumb">Overview</strong></div>
+        <div class="topbar-right">
+          <span class="status-dot"></span><span class="status-text">Learning space</span>
+          <div class="avatar">CV</div>
+        </div>
+      </header>
+
+      <section id="homeView" class="view">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="sparkle">✦</span> YOUR DEVELOPER JOURNEY STARTS HERE</div>
+            <h1>Think in code.<br><span class="gradient-text">Build your future.</span></h1>
+            <p>One space to explore programming, master concepts, practice skills, and discover what's possible with technology.</p>
+            <div class="hero-actions">
+              <button class="primary-button" data-go="explore">Explore learning paths <span>→</span></button>
+              <button class="secondary-button" data-go="learn">My progress</button>
+            </div>
+            <div class="hero-proof"><span class="proof-icons">⌘ &nbsp; { } &nbsp; AI</span><span>Learn at your own pace</span></div>
+          </div>
+          <div class="hero-art" aria-label="Decorative programming illustration">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="floating-code code-one">01&nbsp; const future = "you";</div>
+            <div class="floating-code code-two">def build_skills():</div>
+            <div class="code-window">
+              <div class="window-top"><span></span><span></span><span></span><small>hello_world.py</small></div>
+              <div class="window-code">
+                <p><span class="line-no">01</span> <span class="code-purple">def</span> <span class="code-cyan">keep_learning</span>():</p>
+                <p><span class="line-no">02</span> &nbsp;&nbsp;<span class="code-purple">while</span> <span class="code-orange">True</span>:</p>
+                <p><span class="line-no">03</span> &nbsp;&nbsp;&nbsp;&nbsp;skills.<span class="code-cyan">grow</span>()</p>
+                <p><span class="line-no">04</span> &nbsp;&nbsp;&nbsp;&nbsp;future = <span class="code-green">"bright"</span></p>
+                <p class="code-result">✓ &nbsp; Ready to build something amazing</p>
+              </div>
+            </div>
+            <div class="floating-badge"><span>✦</span> Learn by doing</div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><div class="eyebrow">YOUR LEARNING SPACE</div><h2>Your journey, at a glance</h2></div>
+          <button class="text-button" data-go="learn">View progress ↗</button>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-icon purple-bg">▦</div><div><p>Available topics</p><strong id="statTopics">10</strong><small>Across key tech skills</small></div></article>
+          <article class="stat-card"><div class="stat-icon green-bg">✓</div><div><p>Lessons completed</p><strong id="statCompleted">0</strong><small>Keep building your streak</small></div></article>
+          <article class="stat-card"><div class="stat-icon cyan-bg">◷</div><div><p>Learning progress</p><strong id="statProgress">0%</strong><small>Every lesson counts</small></div></article>
+        </div>
+
+        <div class="section-heading">
+          <div><div class="eyebrow">PICK UP A NEW SKILL</div><h2>Popular learning paths</h2></div>
+          <button class="text-button" data-go="explore">View all topics ↗</button>
+        </div>
+        <div id="homeCategories" class="category-chips">
+          <button class="category-chip active" data-category="All">All topics</button>
+          <button class="category-chip" data-category="Python & Data">Python & Data</button>
+          <button class="category-chip" data-category="Web Development">Web Development</button>
+          <button class="category-chip" data-category="Programming">Programming</button>
+          <button class="category-chip" data-category="AI & Tools">AI & Tools</button>
+        </div>
+        <div id="homeTopicGrid" class="topic-grid"></div>
+        <div class="center-action"><button class="secondary-button" data-go="explore">Explore the full library →</button></div>
+      </section>
+
+      <section id="exploreView" class="view hidden">
+        <div class="page-intro">
+          <div class="eyebrow">THE KNOWLEDGE LIBRARY</div>
+          <h1>Explore your next <span class="gradient-text">skill.</span></h1>
+          <p>Choose a topic, understand the fundamentals, and learn through examples and practice.</p>
+        </div>
+        <div class="search-panel">
+          <div class="search-box"><span>⌕</span><input id="exploreSearch" type="search" placeholder="Search Python, DSA, AI, HTML..." aria-label="Search learning topics"></div>
+          <span class="results-count" id="exploreCount">10 topics</span>
+        </div>
+        <div id="exploreCategories" class="category-chips">
+          <button class="category-chip active" data-category="All">All topics</button>
+          <button class="category-chip" data-category="Python & Data">Python & Data</button>
+          <button class="category-chip" data-category="Web Development">Web Development</button>
+          <button class="category-chip" data-category="Programming">Programming</button>
+          <button class="category-chip" data-category="AI & Tools">AI & Tools</button>
+        </div>
+        <div id="exploreTopicGrid" class="topic-grid"></div>
+      </section>
+
+      <section id="learnView" class="view hidden">
+        <div class="page-intro">
+          <div class="eyebrow">YOUR PERSONAL DASHBOARD</div>
+          <h1>Keep your <span class="gradient-text">momentum.</span></h1>
+          <p>Your learning activity, completed lessons, and next steps in one place.</p>
+        </div>
+        <div id="learningSummary" class="learning-summary"></div>
+        <div class="section-heading"><div><div class="eyebrow">CONTINUE EXPLORING</div><h2>All learning paths</h2></div></div>
+        <div id="recentTopics" class="topic-grid"></div>
+      </section>
+
+      <section id="lessonView" class="view hidden">
+        <div class="lesson-topbar"><button class="text-button" data-go="explore">← Back to topics</button><span class="lesson-counter" id="lessonCounter">LEARNING PATH</span></div>
+        <div id="lessonContent"></div>
+      </section>
+
+      <section id="quizView" class="view hidden">
+        <div class="page-intro">
+          <div class="eyebrow">CHECK YOUR UNDERSTANDING</div>
+          <h1>Practice makes <span class="gradient-text">progress.</span></h1>
+          <p>Choose a topic and test your knowledge with a short quiz.</p>
+        </div>
+        <div class="quiz-setup">
+          <label for="quizTopic">Choose a learning topic</label>
+          <select id="quizTopic"></select>
+          <button id="startQuiz" class="primary-button">Start quiz <span>→</span></button>
+        </div>
+        <div id="quizArea"></div>
+      </section>
+
+      <footer class="main-footer"><span>© 2026 CodeVerse</span><span>Designed for curious minds <span class="accent">✦</span></span></footer>
+    </main>
+  </div>
+</body>
+</html>
